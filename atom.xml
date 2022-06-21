@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>遇见BLOG</title>
+  <icon>https://www.gravatar.com/avatar/30af8514e6d8cffaf5ddb5b3e1642446</icon>
+  <subtitle>美好的事情即将发生 | xn--6qq163lede.icu</subtitle>
+  <link href="http://遇见你.icu/atom.xml" rel="self"/>
+  
+  <link href="http://遇见你.icu/"/>
+  <updated>2022-06-21T01:43:37.633Z</updated>
+  <id>http://遇见你.icu/</id>
+  
+  <author>
+    <name>遇见BLOG</name>
+    <email>chen@xn--6qq163lede.icu</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试内容</title>
+    <link href="http://遇见你.icu/640.html"/>
+    <id>http://遇见你.icu/640.html</id>
+    <published>2022-06-21T01:38:14.999Z</published>
+    <updated>2022-06-21T01:43:37.633Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="点击进入"><a href="#点击进入" class="headerlink" title="点击进入"></a>点击进入</h2><p><a href="cs/index.html"  target="_blank">链接</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;点击进入&quot;&gt;&lt;a href=&quot;#点击进入&quot; class=&quot;headerlink&quot; title=&quot;点击进入&quot;&gt;&lt;/a&gt;点击进入&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;cs/index.html&quot;  target=&quot;_blank&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="测试" scheme="http://遇见你.icu/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试1" scheme="http://遇见你.icu/tags/%E6%B5%8B%E8%AF%951/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA使用JSP用户登录案例</title>
+    <link href="http://遇见你.icu/2959.html"/>
+    <id>http://遇见你.icu/2959.html</id>
+    <published>2022-03-25T05:36:09.886Z</published>
+    <updated>2022-03-25T07:08:12.656Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><p>JSP实现用户登录、注销</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>IDEA、tomcat、JDK18<br>截图效果<br><img src="https://421723691.oss-cn-guangzhou.aliyuncs.com/images-main/code/20220325_130109.jpg" alt="案例截图"></p><h4 id="登录界面HTML"><a href="#登录界面HTML" class="headerlink" title="登录界面HTML"></a>登录界面HTML</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;title&gt;用户登录&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;/head</span>&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form action=<span class="string">&quot;index.jsp&quot;</span> method=<span class="string">&quot;post&quot;</span> &gt;</span><br><span class="line">    &lt;h3&gt;&lt;span&gt;登录&lt;<span class="regexp">/span&gt;&lt;/h</span>3&gt;</span><br><span class="line">    &lt;a&gt;用户名：&lt;<span class="regexp">/a&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;br&gt;</span></span><br><span class="line"><span class="regexp">    &lt;a &gt;密码：&lt;/a</span>&gt;&lt;input type=<span class="string">&quot;password&quot;</span> name=<span class="string">&quot;password&quot;</span>&gt;&lt;br&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;button &gt;登录&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">        &lt;INPUT TYPE=&quot;reset&quot; value=&quot;重置&quot; &gt;</span></span><br><span class="line"><span class="regexp">        &lt;INPUT TYPE=&quot;button&quot; value=&quot;注册&quot; &gt;</span></span><br><span class="line"><span class="regexp">    &lt;/div</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/form&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure><h4 id="登录信息密码账号正确或错误处理代码"><a href="#登录信息密码账号正确或错误处理代码" class="headerlink" title="登录信息密码账号正确或错误处理代码"></a>登录信息密码账号正确或错误处理代码</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;%</span><br><span class="line">    request.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">    String name=request.getParameter(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    String password=request.getParameter(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">%&gt;</span><br><span class="line">&lt;%</span><br><span class="line">    <span class="keyword">if</span>(name.equals(<span class="string">&quot;小梦&quot;</span>)&amp;&amp;password.equals(<span class="string">&quot;666&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        out.print(<span class="string">&quot;输入正确&quot;</span>);</span><br><span class="line">        request.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        session.setAttribute(<span class="string">&quot;username&quot;</span>,name);</span><br><span class="line">        request.getRequestDispatcher(<span class="string">&quot;welcome.jsp&quot;</span>).forward(request, response);</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;%&gt;</span><br><span class="line"></span><br><span class="line">&lt;% &#125;%&gt;</span><br><span class="line">账号或密码错误，等待 3s 跳转登录&lt;br&gt;</span><br><span class="line">&lt;input type=<span class="string">&quot;button&quot;</span>  value=<span class="string">&quot;返回登录&quot;</span> onclick=<span class="string">&#x27;location.href=(&quot;login.html&quot;)&#x27;</span>/&gt;</span><br><span class="line">&lt;% response.setHeader(<span class="string">&quot;Refresh&quot;</span>, <span class="string">&quot;3,URL=login.html&quot;</span>);%&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="登录成功界面"><a href="#登录成功界面" class="headerlink" title="登录成功界面"></a>登录成功界面</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;% String name=(String)session.getAttribute(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(name!=null)&#123;%&gt;</span><br><span class="line"></span><br><span class="line">&lt;div &gt;</span><br><span class="line">    &lt;form action=<span class="string">&quot;index.jsp&quot;</span> method=<span class="string">&quot;post&quot;</span> &gt;</span><br><span class="line">        &lt;h3&gt;&lt;%=session.getAttribute(<span class="string">&quot;username&quot;</span>)%&gt;&lt;a&gt;，欢迎光临,访问个人空间&lt;<span class="regexp">/a&gt;&lt;/h</span>3&gt;</span><br><span class="line">        &lt;div &gt;</span><br><span class="line">            &lt;INPUT TYPE=<span class="string">&quot;reset&quot;</span> value=<span class="string">&quot;注销&quot;</span>onclick=<span class="string">&#x27;location.href=(&quot;kill.jsp&quot;)&#x27;</span> &gt;</span><br><span class="line">            &lt;input type=<span class="string">&quot;button&quot;</span>  value=<span class="string">&quot;返回登录&quot;</span> onclick=<span class="string">&#x27;location.href=(&quot;login.html&quot;)&#x27;</span>/&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/form</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;%&#125;else&#123; %&gt;</span></span><br><span class="line"><span class="regexp">&lt;% response.setHeader(&quot;Refresh&quot;, &quot;0,URL=kill.jsp&quot;);%&gt;</span></span><br><span class="line"><span class="regexp">&lt;%&#125; %&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure><h4 id="注销账号界面"><a href="#注销账号界面" class="headerlink" title="注销账号界面"></a>注销账号界面</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;% String name=(String)session.getAttribute(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(name!=null)&#123;%&gt;</span><br><span class="line">&lt;div  &gt;</span><br><span class="line">    &lt;form action=<span class="string">&quot;index.jsp&quot;</span> method=<span class="string">&quot;post&quot;</span> &gt;</span><br><span class="line">        &lt;h3&gt;&lt;%=session.getAttribute(<span class="string">&quot;username&quot;</span>)%&gt;&lt;a&gt;，正在注销账号登录，请等待5s&lt;<span class="regexp">/a&gt;&lt;/h</span>3&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;%session.invalidate();</span><br><span class="line">                response.setHeader(<span class="string">&quot;Refresh&quot;</span>, <span class="string">&quot;5,URL=login.html&quot;</span>);</span><br><span class="line">            %&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;%&#125;else&#123; %&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div &gt;</span></span><br><span class="line"><span class="regexp">            &lt;form action=&quot;index.jsp&quot; method=&quot;post&quot; &gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">                &lt;h3&gt;&lt;%=session.getAttribute(&quot;username&quot;)%&gt;&lt;a&gt;，原因：您未登录请登录后再拭，5s后自动回登录&lt;/a</span>&gt;&lt;<span class="regexp">/h3&gt;</span></span><br><span class="line"><span class="regexp">                &lt;div style=&quot;text-align: center&quot;&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;input type=&quot;button&quot;  value=&quot;返回登录&quot; onclick=&#x27;location.href=(&quot;login.html&quot;)&#x27;/</span>&gt;</span><br><span class="line">                &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/form</span>&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;% response.setHeader(&quot;Refresh&quot;, &quot;5,URL=login.html&quot;);%&gt;</span></span><br><span class="line"><span class="regexp">            &lt;%&#125; %&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;headerlink&quot; title=&quot;导读&quot;&gt;&lt;/a&gt;导读&lt;/h2&gt;&lt;p&gt;JSP实现用户登录、注销&lt;/p&gt;
+&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    <category term="JSP" scheme="http://遇见你.icu/categories/JSP/"/>
+    
+    
+    <category term="网页编程" scheme="http://遇见你.icu/tags/%E7%BD%91%E9%A1%B5%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA安装运行JSP</title>
+    <link href="http://遇见你.icu/41653.html"/>
+    <id>http://遇见你.icu/41653.html</id>
+    <published>2022-03-22T16:38:48.008Z</published>
+    <updated>2022-03-23T03:35:58.652Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><p>IDEA的安装、tomcat安装设置以及运行JSP</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>IDEA、tomcat、JDK18</p><h4 id="IDEA运行JSP时提示端口占用"><a href="#IDEA运行JSP时提示端口占用" class="headerlink" title="IDEA运行JSP时提示端口占用"></a>IDEA运行JSP时提示端口占用</h4><p>1.解决方法： win+R键打开CMD<br>netstat -aon|findstr “8080”<br><br>8080端口对应的pid是26224，我们的目标是终止掉26224，如果你是其它端口占用了那就把8080给换成你被占用的<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       26224<br>  TCP    192.168.31.120:59745   183.47.113.174:8080    ESTABLISHED     30976<br>  TCP    [::]:8080              [::]:0                 LISTENING       26224<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>tasklist|findstr “26224”<br>查看占用8080端口的应用<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>java.exe                     26224 Console                    1     36,380 K<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>taskkill &#x2F;f &#x2F;t &#x2F;im java.exe<br>结束占用的端口的软件<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>成功: 已终止 PID 20344 (属于 PID 22328 子进程)的进程。<br>成功: 已终止 PID 26224 (属于 PID 14884 子进程)的进程。<br>成功: 已终止 PID 22328 (属于 PID 28208 子进程)的进程。</p><h4 id="IDEA激活码"><a href="#IDEA激活码" class="headerlink" title="IDEA激活码"></a>IDEA激活码</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">UU9IM4OF7Q-eyJsaWNlbnNlSWQiOiJVVTlJTTRPRjdRIiwibGljZW5zZWVOYW1lIjoiY29weWNhdCBjYXJlIiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IiIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAyLTI1IiwicGFpZFVwVG8iOiIyMDIzLTAyLTI1IiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQREIiLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAyLTI1IiwicGFpZFVwVG8iOiIyMDIzLTAyLTI1IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBXUyIsImZhbGxiYWNrRGF0ZSI6IjIwMjMtMDItMjUiLCJwYWlkVXBUbyI6IjIwMjMtMDItMjUiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUEdPIiwiZmFsbGJhY2tEYXRlIjoiMjAyMy0wMi0yNSIsInBhaWRVcFRvIjoiMjAyMy0wMi0yNSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQUFMiLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAyLTI1IiwicGFpZFVwVG8iOiIyMDIzLTAyLTI1IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBQQyIsImZhbGxiYWNrRGF0ZSI6IjIwMjMtMDItMjUiLCJwYWlkVXBUbyI6IjIwMjMtMDItMjUiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFJCIiwiZmFsbGJhY2tEYXRlIjoiMjAyMy0wMi0yNSIsInBhaWRVcFRvIjoiMjAyMy0wMi0yNSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU1ciLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAyLTI1IiwicGFpZFVwVG8iOiIyMDIzLTAyLTI1IiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBTSSIsImZhbGxiYWNrRGF0ZSI6IjIwMjMtMDItMjUiLCJwYWlkVXBUbyI6IjIwMjMtMDItMjUiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUENXTVAiLCJmYWxsYmFja0RhdGUiOiIyMDIzLTAyLTI1IiwicGFpZFVwVG8iOiIyMDIzLTAyLTI1IiwiZXh0ZW5kZWQiOnRydWV9XSwibWV0YWRhdGEiOiIwMTIwMjIwMjI1UFNBTjAwMDAwNSIsImhhc2giOiJUUklBTDotMzE2ODE2NTA0IiwiZ3JhY2VQZXJpb2REYXlzIjo3LCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-Mv/80rtqoKgB/3CQP47ctauKD2/dxDr7etb0JzC9fHz67btK8m7r3uUq4L99mAW0U4HJPQk/GAVG1AvXXXTmHoTYfr63hbY0l1g+Th3pJAHRfuIFXS2gds1tUFB80BL5AwA8MmSOIVbG7gJ8jb7YEwL3juJ5bXmDQbxn2GKhYe40nFXuAagPQobOL5WF8vXZTqRWE+t5BtD1+b3zCeDhggtVAGeU/RM5cUHA9S7Ji6BY8BR5NdXeMsVFa8VOFvhs1JrSCkKJyg8pNd+ZmS7Kmpe4SgXAAjxvEet+oKye79KQj7Ne42oQJf/gdjnzK66503SSrFEDH1WEcfUhnoze/A==-MIIETDCCAjSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIwMTAxOTA5MDU1M1oXDTIyMTAyMTA5MDU1M1owHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMDEwMTkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUlaUFc1wf+CfY9wzFWEL2euKQ5nswqb57V8QZG7d7RoR6rwYUIXseTOAFq210oMEe++LCjzKDuqwDfsyhgDNTgZBPAaC4vUU2oy+XR+Fq8nBixWIsH668HeOnRK6RRhsr0rJzRB95aZ3EAPzBuQ2qPaNGm17pAX0Rd6MPRgjp75IWwI9eA6aMEdPQEVN7uyOtM5zSsjoj79Lbu1fjShOnQZuJcsV8tqnayeFkNzv2LTOlofU/Tbx502Ro073gGjoeRzNvrynAP03pL486P3KCAyiNPhDs2z8/COMrxRlZW5mfzo0xsK0dQGNH3UoG/9RVwHG4eS8LFpMTR9oetHZBAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQUJNoRIpb1hUHAk0foMSNM9MCEAv8wSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBAB2J1ysRudbkqmkUFK8xqhiZaYPd30TlmCmSAaGJ0eBpvkVeqA2jGYhAQRqFiAlFC63JKvWvRZO1iRuWCEfUMkdqQ9VQPXziE/BlsOIgrL6RlJfuFcEZ8TK3syIfIGQZNCxYhLLUuet2HE6LJYPQ5c0jH4kDooRpcVZ4rBxNwddpctUO2te9UU5/FjhioZQsPvd92qOTsV+8Cyl2fvNhNKD1Uu9ff5AkVIQn4JU23ozdB/R5oUlebwaTE6WZNBs+TA/qPj+<span class="number">5</span>/we9NH71WRB0hqUoLI2AKKyiPw++FtN4Su1vsdDlrAzDj9ILjpjJKA1ImuVcG329/WTYIKysZ1CWK3zATg9BeCUPAV1pQy8ToXOq+RSYen6winZ2OO93eyHv2Iw5kbn1dqfBw1BuTE29V2FJKicJSu8iEOpfoafwJISXmz1wnnWL3V/0NxTulfWsXugOoLfv0ZIBP1xH9kmf22jjQ2JiHhQZP7ZDsreRrOeIQ/c4yR8IQvMLfC0WKQqrHu5ZzXTH4NO3CwGWSlTY74kE91zXB5mwWAx1jig+UXYc2w4RkVhy0/<span class="regexp">/lOmVya/</span>PEepuuTTI4+UJwC7qbVlh5zfhj8oTNUXgN0AOc+Q0/WFPl1aw5VV/VrO8FCoB15lFVlpKaQ1Yh+DVU8ke+rt9Th0BCHXe0uZOEmH0nOnH/0onD</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="工具下载地址"><a href="#工具下载地址" class="headerlink" title="工具下载地址"></a>工具下载地址</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>/<span class="regexp">/wss1.cn/f</span><span class="regexp">/7wc42tfb1zr</span></span><br><span class="line"><span class="regexp">密码：5575 ：制链接到浏览器打开</span></span><br><span class="line"><span class="regexp"></span></span><br></pre></td></tr></table></figure><h4 id="教程视频"><a href="#教程视频" class="headerlink" title="教程视频"></a>教程视频</h4><iframe src="//player.bilibili.com/player.html?aid=595090673&bvid=BV13q4y1Y7Pp&cid=556513013&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;headerlink&quot; title=&quot;导读&quot;&gt;&lt;/a&gt;导读&lt;/h2&gt;&lt;p&gt;IDEA的安装、tomcat安装设置以及运行JSP&lt;/p&gt;
+&lt;h3 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;hea</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://遇见你.icu/1.html"/>
+    <id>http://遇见你.icu/1.html</id>
+    <published>2022-03-16T12:47:34.205Z</published>
+    <updated>2022-03-23T01:55:30.575Z</updated>
+    
+    <content type="html"><![CDATA[------<!DOCTYPE html><html><head><meta charset="utf-8"><title></title></head><body><div><h5>不论你是通过什么途径访问的本站，我都想与你说一句：“很高兴能够与你在<a href="https://遇见你.icu">遇见你博客BLOG</a>上相见”，本人博客用于记录生活、分享一些没啥用的软件等。搭建这个网站纯属个人爱好，本站无广告没有任何收费。需要RSS的话那可以通过这个订阅源来订阅本站<a href="https://遇见你.icu/atom.xml" >遇见RSS</a>，本站通过GitHub部署的网站，使用<a href="https://hexo.io">hexo</a>博客框架，主题来自<a href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.6.1">stellar</a></h5></div></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">---
+
+---
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	
+	&lt;div&gt;
+	&lt;h5&gt;不论你是通过什么途径访问的本站，我都想与你说一句：“</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>海内存知己天涯若比邻</title>
+    <link href="http://遇见你.icu/46030.html"/>
+    <id>http://遇见你.icu/46030.html</id>
+    <published>2022-03-16T06:53:34.641Z</published>
+    <updated>2022-05-08T08:27:46.650Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><p>你好，“很高兴能够与你在<br><a href="https://遇见你.icu">遇见你博客BLOG</a>上相见”，本人博客用于记录生活、分享一些没啥用的软件等。<br>搭建这个网站纯属个人爱好，本站无广告没有任何收费。<br>需要RSS的话那可以通过这个订阅源来订阅本站<a href="https://遇见你.icu/atom.xml" >遇见RSS</a>，本站通过GitHub部署的网站，<br>使用<a href="https://hexo.io">hexo</a>博客框架，主题来自<a href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.6.1">stellar</a></h5><br>接下来开始随我搭建一个你自己的博客网站吧！</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>   1.安装Git<br>    2.安装Node.js<br>    3.安装Hexo<br>    4.GitHub创建个人仓库<br>    5.生成SSH添加到GitHub<br>    6.将hexo部署到GitHub<br>    7.设置个人域名<br>    8.发布文章</p><h4 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h4><p>Windows点击<a href="https://git-scm.com/download/win">Git</a>进行下载</p><h5 id="Linux安装Git"><a href="#Linux安装Git" class="headerlink" title="Linux安装Git"></a>Linux安装Git</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux安装Git</span></span><br><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure><h4 id="2-安装nodejs"><a href="#2-安装nodejs" class="headerlink" title="2. 安装nodejs"></a>2. 安装nodejs</h4><p>Windows点击<a href="https://nodejs.org/en/download/">nodejs</a>进行下载<a style="color: crimson;">(建议选择长期本版)</a></p><h5 id="Linux安装nodejs"><a href="#Linux安装nodejs" class="headerlink" title="Linux安装nodejs"></a>Linux安装nodejs</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux安装nodejs</span></span><br><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure><h4 id="3-查看本版"><a href="#3-查看本版" class="headerlink" title="3. 查看本版"></a>3. 查看本版</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看node、npm版本（显示出版本号即为正常）</span></span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><h4 id="4-安装hexo"><a href="#4-安装hexo" class="headerlink" title="4. 安装hexo"></a>4. 安装hexo</h4><p>鼠标右键选择git bash然后输入下面命令</p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment">#查看版本</span></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure><h5 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="comment">#后面的blog可以自己更改</span></span><br></pre></td></tr></table></figure><h5 id="最后执行"><a href="#最后执行" class="headerlink" title="最后执行"></a>最后执行</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd myblog </span><br><span class="line"><span class="comment">#进入这个blog文件夹</span></span><br><span class="line">npm install</span><br><span class="line"><span class="comment">#开始安装</span></span><br></pre></td></tr></table></figure><h5 id="hexo目录说明"><a href="#hexo目录说明" class="headerlink" title="hexo目录说明"></a>hexo目录说明</h5><pre><code>node_modules: 依赖包public：存放生成的页面scaffolds：生成文章的一些模板source：用来存放你的文章themes：主题** _config.yml: 博客的配置文件**</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;导读&quot;&gt;&lt;a href=&quot;#导读&quot; class=&quot;headerlink&quot; title=&quot;导读&quot;&gt;&lt;/a&gt;导读&lt;/h2&gt;&lt;p&gt;你好，“很高兴能够与你在&lt;br&gt;&lt;a href=&quot;https://遇见你.icu&quot;&gt;遇见你博客BLOG&lt;/a&gt;上相见”，本人博客用于记录生活</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用手机摄像头测量心率</title>
+    <link href="http://遇见你.icu/3267.html"/>
+    <id>http://遇见你.icu/3267.html</id>
+    <published>2022-03-16T06:53:34.640Z</published>
+    <updated>2022-03-11T13:18:45.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。</p><span id="more"></span><p>后面是正文部分，在主页看不到。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在心率管家默默无闻地上线了一年多之后，现在终于打算来好好聊聊关于手机摄像头测量心率的那些事。本文参考了很多前辈的文章，将在文末列出。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="设计开发" scheme="http://遇见你.icu/categories/%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="iOS" scheme="http://遇见你.icu/tags/iOS/"/>
+    
+    <category term="心率" scheme="http://遇见你.icu/tags/%E5%BF%83%E7%8E%87/"/>
+    
+  </entry>
+  
+</feed>

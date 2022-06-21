@@ -1,0 +1,322 @@
+#card {
+
+    height: 240px;
+
+}
+
+#cun {
+    /* 固定定位至中间 */
+
+    position: absolute;
+    top: 0px;
+    transform: translate(-50%, -50%);
+
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px
+}
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.flex-col {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-col .flex-row {
+    width: 100%
+}
+
+/** 全局样式-结束*/
+
+.mian {
+    padding-top: 1.25rem;
+}
+
+.mian .wrapper {
+    width: 100%;
+    margin-bottom: 0.625rem;
+    padding: 1.5rem 0rem;
+    text-align: center;
+}
+
+.mian .wrapper .text {
+    font-size: 1.125rem;
+    line-height: 0.875rem;
+}
+
+.mian .wrapper-two {
+    width: 45.188rem;
+    height: 19.563rem;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-bottom: 0.938rem;
+    margin-left: auto;
+    padding: 0.813rem 1rem 0rem 2.938rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/f445cfa2-dbb6-410d-9128-097d3552af0e.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.mian .wrapper-two .wraper-col {
+    width: 9.75rem;
+    margin-top: 13.25rem;
+}
+
+.mian .wrapper-two .text-two {
+    margin-bottom: 1.375rem;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #ffffff;
+}
+
+.mian .wrapper-two .to-the-person {
+    font-size: 1.625rem;
+    line-height: 0.875rem;
+    color: #ffffff;
+}
+
+.mian .wrapper-two .wraper-col-two {
+    width: 3.688rem;
+    padding: 0.5rem 0rem;
+    border-radius: 0.688rem;
+    background: #bababa;
+    text-align: center;
+}
+
+.mian .wrapper-two .file {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #ffffff;
+}
+
+.mian .wrapper-three {
+    width: 45.25rem;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-bottom: 0.938rem;
+    margin-left: auto;
+    padding-right: 0.063rem;
+}
+
+.mian .wrapper-three .wraper-col-three {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .box {
+    width: 100%;
+    padding: 1.469rem 0rem 1.094rem 1.75rem;
+}
+
+.mian .box .god-in-the {
+    margin-bottom: 0.625rem;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-three .text-three {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .box .box-row {
+    width: 0rem;
+    height: 0rem;
+    top: 0rem;
+    left: 0rem;
+    position: absolute;
+}
+
+.mian .wrapper-three .wraper-col-four {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-three .text-four {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-three .wraper-col-five {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-three .text-five {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-four {
+    width: 45.25rem;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-bottom: 0.938rem;
+    margin-left: auto;
+    padding-right: 0.063rem;
+}
+
+.mian .wrapper-four .wraper-col-six {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-four .text-six {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-four .wraper-col-seven {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-four .text-seven {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-four .wraper-col-eight {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-four .text-eight {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-five {
+    width: 45.25rem;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-bottom: 0.938rem;
+    margin-left: auto;
+    padding-right: 0.063rem;
+}
+
+.mian .wrapper-five .wraper-col-nine {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-five .text-nine {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-five .wraper-col-ten {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-five .text-ten {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-five .wraper-col-eleven {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-five .text-eleven {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-six {
+    width: 45.25rem;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0.063rem;
+}
+
+.mian .wrapper-six .wraper-col-twelve {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-six .text-twelve {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-six .wraper-col-thirteen {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-six .text-thirteen {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+.mian .wrapper-six .wraper-col-fourteen {
+    width: 13.688rem;
+    padding-top: 7.125rem;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/dd0b34ce-bf6b-4532-aa54-5c7125171956.jpg);
+    background-size: cover;
+}
+
+.mian .wrapper-six .text-fourteen {
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fafafa;
+}
+
+#pagin {
+
+    /* 居中 */
+    margin: 0 auto;
+}

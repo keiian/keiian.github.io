@@ -1,0 +1,449 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+* {
+    /* 元素相对于父元素的位置 */
+    box-sizing: border-box;
+    /* 元素的padding和border不会影响子元素的大小 */
+    flex-shrink: 0;
+    /* 元素不会被缩小 */
+}
+
+.flex-col {
+    display: flex;
+    /* 元素显示为flex布局 */
+    align-items: flex-start;
+    /* 元素在flex布局中水平居中 */
+    flex-direction: column;
+    /* 元素在flex布局中竖直居中 */
+}
+
+.flex-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-col .flex-row {
+    width: 100%
+}
+
+/** 全局样式-结束*/
+
+.bottom_page {
+    height: 900px;
+}
+
+.bottom_page .wrapper {
+    width: 749px;
+    height: 811px;
+}
+
+.bottom_page .wrapper .wraper-row {
+    width: 740px;
+    height: 716px;
+    margin-bottom: 59px;
+}
+
+.bottom_page .wrapper .box {
+    width: 740px;
+    justify-content: space-between;
+    /* 元素在flex布局中水平居中 */
+    margin-bottom: 18px;
+}
+
+.bottom_page .wrapper .box-col {
+    width: 224px;
+    padding: 138px 0px 3px 0px;
+    border-radius: 10px;
+    /* 元素的圆角 */
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/0d7163df-6796-4a40-a6ce-91231e0e2437.jpg) no-repeat;
+    background-size: cover;
+    /* 元素的背景图片会被填充到元素的大小 */
+}
+
+.bottom_page .wrapper .container {
+    width: 207px;
+    padding: 28px 0px 13px 30px;
+}
+
+.bottom_page .wrapper .god-in-the {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 14px;
+    color: #fff;
+}
+
+.bottom_page .wrapper .text {
+    font-size: 16px;
+    line-height: 14px;
+    color: #fff;
+}
+
+.bottom_page .wrapper .container-two {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .god-in-the-nine {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 14px;
+    color: #fff;
+}
+
+.bottom_page .wrapper .container-three {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .container-four {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .box-col-two {
+    width: 224px;
+    height: 220px;
+    border-radius: 10px;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/0d7163df-6796-4a40-a6ce-91231e0e2437.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bottom_page .wrapper .container-five {
+    width: 207px;
+    padding: 28px 0px 35px 30px;
+    bottom: -15px;
+    left: 0px;
+    position: absolute;
+}
+
+.bottom_page .wrapper .container-six {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .box-two {
+    width: 740px;
+    justify-content: space-between;
+    /* 元素在flex布局中水平居中 */
+}
+
+.bottom_page .wrapper .container-seven {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .container-eight {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .container-nine {
+    width: 207px;
+    padding: 28px 0px 17px 30px;
+}
+
+.bottom_page .wrapper .wraper-row-two {
+    width: 748px;
+    height: 83px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 139px;
+}
+
+.bottom_page .wrapper .box-three {
+    width: 434px;
+    padding: 22px 0px 1px 0px;
+}
+
+.bottom_page .wrapper .box-row {
+    width: 434px;
+    justify-content: space-between;
+    padding: 8px 78px 8px 77px;
+}
+
+.bottom_page .wrapper .container-ten {
+    width: 32px;
+    padding: 11.5px 0px;
+    border-radius: 5px;
+    background: #8d4fdb;
+    text-align: center;
+}
+
+.bottom_page .wrapper .text-two {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.bottom_page .wrapper .container-eleven {
+    width: 32px;
+    padding: 11.5px 0px;
+    border-radius: 5px;
+    background: #33383a;
+    text-align: center;
+}
+
+.bottom_page .wrapper .text-three {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.bottom_page .wrapper .container-twelve {
+    width: 32px;
+    padding: 11.5px 0px;
+    border-radius: 5px;
+    background: #33383a;
+    text-align: center;
+}
+
+.bottom_page .wrapper .text-four {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.bottom_page .wrapper .container-thirteen {
+    width: 32px;
+    padding: 11.5px 0px;
+    border-radius: 5px;
+    background: #33383a;
+    text-align: center;
+}
+
+.bottom_page .wrapper .text-five {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.bottom_page .wrapper .container-fourteen {
+    width: 32px;
+    padding: 11.5px 0px;
+    border-radius: 5px;
+    background: #33383a;
+    text-align: center;
+}
+
+.bottom_page .wrapper .text-six {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.bottom_page .wrapper .container-fifteen {
+    width: 32px;
+    padding: 11.5px 0px 11.5px 3.5px;
+    border-radius: 5px;
+    background: #33383a;
+}
+
+.bottom_page .wrapper .text-seven {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.bottom_page .wrapper .container-sixteen {
+    width: 32px;
+    padding: 11.5px 0px 11.5px 5.5px;
+    border-radius: 5px;
+    background: #33383a;
+}
+
+.bottom_page .wrapper .text-eight {
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+
+
+/* 鼠标经过时图片变成灰色效果 */
+.Article_image_link:hover {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+.Article_image_link {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+    /* 圆角 */
+    border-radius: 10px;
+}
+
+/* -------------------------------- */
+
+
+.ll {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    /* 居中 */
+    background-color: black;
+}
+
+.lll {
+    color: #fff;
+}
+
+.lm {
+    height: 40px;
+    display: block;
+    /* 元素显示 */
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* 侧边栏 */
+.ii {
+    position: fixed;
+    /* 固定定位 */
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    /* 圆角 */
+    border-radius: 10px;
+    background-color: rgba(223, 223, 223, 0.4);
+    /* 背景透明度 */
+    backdrop-filter: saturate(180%) blur(20px);
+    /* 背景模糊 */
+
+    /* 背景阴影 */
+    box-shadow: 0 0 10px rgba(225, 225, 225, 0.5);
+
+
+}
+
+.icon {
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    right: 100;
+    left: 0;
+    width: 10%;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.txet {
+    /* 固定定位 */
+    margin-left: 20px;
+    margin-top: 50px;
+    /* 文字阴影 */
+    text-shadow: 0 0 10px rgba(205, 205, 205, 0.5);
+    color: rgba(253, 253, 253, 0.617);
+}
+
+.dll {
+    /* 文字阴影 */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    /* 字体大小 */
+    font-size: 30px;
+    /* 转为块级元素 */
+    display: block;
+    width: 150px;
+    /* 居中 */
+    margin: 0 auto;
+}
+
+/* 鼠标点击背景变色 */
+.dll:hover {
+    background-color: rgba(255, 255, 255, 0.327);
+    /* 背景透明度 */
+    backdrop-filter: saturate(180%) blur(20px);
+    /* 背景模糊 */
+    /* 圆角 */
+    border-radius: 18px;
+    /* 背景阴影 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 50px;
+}
+
+.vvv {
+    background-color: rgba(255, 255, 255, 0.327);
+    /* 背景透明度 */
+    backdrop-filter: saturate(180%) blur(20px);
+    /* 背景模糊 */
+    /* 圆角 */
+    border-radius: 18px;
+    /* 背景阴影 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 50px;
+}
+
+.pag{
+    /* 居中 */
+text-align: center;
+
+
+}

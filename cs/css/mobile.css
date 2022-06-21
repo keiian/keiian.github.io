@@ -1,0 +1,224 @@
+
+/** iPad **/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .bottom_page{
+        display: none;
+    }
+    .nav_menu{
+        display: none;
+    }
+    .cover_part{
+        padding-top: 150px;
+    }
+    .Card_d{
+        height: 700px;
+    
+    }
+    .container {
+    
+        margin-left: 15px;
+     
+    }
+    .cont{
+        height: 10px;
+    }
+    .logo{
+        padding-right: 300px;
+    /* 固定定位到左边 */
+        left: 10px;
+    }
+    .logo2{
+    /* 固定定位到左边 */
+    
+        right: 10px;
+        padding-left: 340px;
+    
+    
+    }
+    
+}
+/** iPhone **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+.bottom_page{
+    display: none;
+}
+.nav_menu{
+    display: none;
+}
+.cover_part{
+    padding-top: 150px;
+}
+.Card_d{
+    height: 700px;
+
+}
+.container {
+
+    margin-left: 15px;
+ 
+}
+.cont{
+    height: 10px;
+}
+.logo{
+    padding-right: 285px;
+/* 固定定位到左边 */
+    left: 10px;
+}
+.logo2{
+/* 固定定位到左边 */
+
+    right: 10px;
+    /* padding-left: 340px; */
+
+
+}
+}
+/** PC**/
+@media only screen and (min-width: 1001px) and (max-width: 9900px) {
+
+        .mod{
+            display: none;
+        }
+     .bottom_page{
+        padding-left: 100px;
+     }   
+     .logo2{
+        display: none;
+     }
+     .cont{
+        height: 0px;
+    }
+    .pag{
+        display: none;
+    }
+
+ }
+ @media only screen and (min-width: 120px) and (max-width: 385px) {
+ .logo{
+    height: 40px;padding-right: 250px;
+ }
+}
+ @media only screen and (min-width: 700px) and (max-width: 759px) {
+.logo{
+    height: 40px;padding-right: 600px;
+}
+}
+@media only screen and (min-width: 30px) and (max-width: 353px) {
+    .logo{
+        height: 40px;padding-right: 200px;
+    }
+
+    }
+    @media only screen and (min-width: 30px) and (max-width: 400px) {
+        .pag{
+
+            padding-left: 0px;
+    
+        }
+    }
+.flex-col {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-col .flex-row {
+    width: 100%
+}
+
+/** 全局样式-结束*/
+
+.bottom_of_card .wrapper {
+    width: 100%;
+    padding: 19px 0px 14px 44.5px;
+}
+
+.bottom_of_card .wrapper .wraper-row {
+    width: 661px;
+    justify-content: space-between;
+    margin: 0px 0px 47px 1px;
+    padding: 32px 34px 16px 20px;
+    border-radius: 5px;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/1e9a315f-91ae-4e0f-ae69-d085557131bc.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bottom_of_card .wrapper .box {
+    width: 214px;
+    height: 137px;
+    margin-top: 186px;
+    padding: 23px 0px 0px 23px;
+}
+
+.bottom_of_card .wrapper .text {
+    margin-bottom: 47px;
+    font-size: 23px;
+    line-height: 14px;
+    color: #fcfcfc;
+}
+
+.bottom_of_card .wrapper .old-days {
+    letter-spacing: 6px;
+    font-size: 23px;
+    line-height: 18px;
+    color: #fcfcfc;
+}
+
+.bottom_of_card .wrapper .box-two {
+    width: 145px;
+    justify-content: center;
+    padding: 15.5px 0px;
+}
+
+.bottom_of_card .wrapper .box-row {
+    width: 120px;
+    padding: 12.5px 0px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.bottom_of_card .wrapper .my-fm {
+    letter-spacing: 3px;
+    font-size: 21px;
+    line-height: 14px;
+    color: #f7f7f7;
+}
+
+.bottom_of_card .wrapper .wraper-row-two {
+    width: 661px;
+    height: 423px;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding: 32px 34px 0px 20px;
+    border-radius: 5px;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/1e9a315f-91ae-4e0f-ae69-d085557131bc.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bottom_of_card .wrapper .wraper-row-three {
+    width: 661px;
+    height: 423px;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding: 32px 34px 0px 20px;
+    border-radius: 5px;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/1e9a315f-91ae-4e0f-ae69-d085557131bc.jpg) no-repeat;
+    background-size: cover;
+}
+
+.bottom_of_card .wrapper .wraper-row-four {
+    width: 661px;
+    height: 423px;
+    justify-content: space-between;
+    padding: 32px 34px 0px 20px;
+    border-radius: 5px;
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/1e9a315f-91ae-4e0f-ae69-d085557131bc.jpg) no-repeat;
+    background-size: cover;
+}

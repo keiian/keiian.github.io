@@ -1,0 +1,232 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px
+}
+
+* {
+    position: relative;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.flex-col {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-col .flex-row {
+    width: 100%
+}
+
+/** 全局样式-结束*/
+
+.Login {
+    background: url(https://vkceyugu.cdn.bspapp.com/VKCEYUGU-55dbb834-9ba8-4068-98ca-c341f6402e27/2de09c21-46fc-4fe9-8732-84841da96071.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Login .wrapper {
+    width: 500px;
+    height: 100%;
+    padding-top: 110px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.352);
+    /* 背景透明度 */
+    backdrop-filter: saturate(180%) blur(20px);
+    /* 背景模糊 */
+}
+
+.Login .wrapper .wraper-row {
+    width: 368px;
+    justify-content: center;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.Login .wrapper .img {
+    width: 100px;
+    height: 95px;
+}
+
+.Login .wrapper .wraper-row-two {
+    width: 100%;
+    height: 200px;
+    padding: 31px 8px 0px 8px;
+}
+
+.Login .wrapper .text {
+    width: 100%;
+    margin-bottom: 51px;
+    font-size: 14px;
+}
+
+.Login .wrapper .text-two {
+    width: 285px;
+    margin-left: 11px;
+    font-size: 14px;
+}
+
+/* 用户名 */
+.one-line-text {
+    text-align: center;
+}
+
+.su {
+    color: rgba(255, 255, 255, 0.607);
+    width: 280px;
+}
+
+.suu {
+    color: rgba(255, 255, 255, 0.607);
+    width: 200px;
+}
+
+#cz {
+    margin-left: 70px;
+
+}
+
+input {
+    /* 取消边框 */
+    border: none;
+    width: 68%;
+    height: 50px;
+    /* 圆角 */
+    border-radius: 15px;
+    /* 阴影 */
+    box-shadow: 0px 0px 5px rgba(130, 130, 130, 0.2);
+    /* 点击时无边框 */
+    outline: none;
+    /* 字体颜色 */
+    color: rgb(255, 255, 255);
+    /* 字体大小 */
+    font-size: 20px;
+    /* 字体粗细 */
+    font-weight: 400;
+    /* 字体间距 */
+    letter-spacing: 0px;
+    /* 字体对齐 */
+    text-align: center;
+    /* 半透明 */
+    background-color: rgba(255, 255, 255, 0.407);
+
+}
+
+.mm {
+    display: flex;
+
+    margin-left: 66px;
+    color: rgb(166, 166, 166);
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.dl {
+
+    margin-left: 340px;
+
+}
+
+.btn {
+    /* 登录按钮 */
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.071);
+    /* 背景透明度 */
+    backdrop-filter: saturate(180%) blur(20px);
+    /* 背景模糊 */
+    border-radius: 20px;
+    color: rgb(19, 19, 19);
+    padding: 8px;
+    /* 取消边框 */
+    border: none;
+    /* 阴影 */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    /* 阴影 */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(160, 160, 160);
+    border-radius: 20px;
+    color: #fff;
+    padding: 8px;
+    box-shadow: 0 0 30px 0 rgb(204, 200, 200),
+        0 0 30px 0 rgb(174, 147, 152),
+        0 0 10px 0 rgb(180, 149, 155) inset;
+}
+
+.btn:active {
+    /* 阴影 */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(160, 160, 160);
+    border-radius: 20px;
+    color: #fff;
+    padding: 8px;
+    box-shadow: 0 0 30px 0 rgb(204, 200, 200),
+        0 0 30px 0 rgb(174, 147, 152),
+        0 0 10px 0 rgb(180, 149, 155) inset;
+}
+
+.back {
+    width: 35px;
+    height: 35px;
+    /* 定位至左上角 */
+    position: absolute;
+    top: -200px;
+    left: 10px;
+}
+
+.zc {
+    /* 字体大小 */
+    font-size: 14px;
+    /* 字体粗细 */
+    font-weight: 400;
+    /* 字体间距 */
+    letter-spacing: 3px;
+    /* 字体颜色 */
+    color: rgb(225, 179, 245);
+
+    margin-left: 10px;
+
+}
+
+.fh {
+    /* 固定底部 */
+    display: flex;
+    position: fixed;
+    bottom: 100px;
+    left: 200px;
+    color: rgb(215, 215, 215);
+    /* 文字阴影 */
+    text-shadow: 0 0 5px rgba(128, 128, 128, 0.269);
+}
+
+a {
+    text-decoration: none;
+}
+
+.ino {
+    width: 20px;
+
+    height: 30px;
+    margin-right: 10px;
+
+}
