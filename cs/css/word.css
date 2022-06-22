@@ -94,15 +94,14 @@ body {
     width: 3.688rem;
     padding: 0.5rem 0rem;
     border-radius: 0.688rem;
-/* 背景半透明 */
-    background: rgba(255, 255, 255, 0.5);
+    background: #bababa;
     text-align: center;
 }
 
 .mian .wrapper-two .file {
     font-size: 0.875rem;
     line-height: 0.875rem;
-    color: #292828;
+    color: #ffffff;
 }
 
 .mian .wrapper-three {
