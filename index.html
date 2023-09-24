@@ -22,5 +22,27 @@
 </head>
 <body>
   <img src="https://img.520150.xyz/file/2fcdb5bf085759f2fdf0c.png" alt="圖片">
+
+
+
+  <script>
+    // 倒計時函數
+    function countdown(seconds) {
+      if (seconds > 0) {
+        // 顯示倒計時數字
+        console.log(seconds);
+        // 遞歸調用倒計時函數，減少1秒
+        setTimeout(function() {
+          countdown(seconds - 1);
+        }, 1000);
+      } else {
+        // 倒計時結束，跳轉頁面
+        window.location.href = "目標網頁的URL";
+      }
+    }
+
+    // 調用倒計時函數，設置倒計時時間為5秒
+    countdown(5);
+  </script>
 </body>
 </html>
