@@ -1,0 +1,208 @@
+body {
+	background:url(../images/bg.jpg) no-repeat 100%;
+	background-size: 100%;
+	font-family: 'open_sanslight';
+	font-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+/**-----start-wrap---------**　路羽资源博客 www.luyuz.cn/
+.wrap
+{
+	width:70%;
+	margin:5.2% auto 4% auto;
+}
+/**-----start-maintenance--------**/
+.maintenance
+{
+	padding: 1em;
+	text-align: center;
+	padding: 1% 1% 5% 1%;
+}
+
+.maintenance span{
+	font-size: 2em;
+	color:#fff;
+}
+.maintenance span img{
+	width:40px;
+	height: 40px;
+	vertical-align:bottom;
+	margin: 0px 10px;
+}
+/**-----end-maintenance---------**/
+/**-----start-search-bar-section------**/
+.buttom
+{
+	background:url(../images/bg2.png) no-repeat 100% 0%;
+	background-size: 100%;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	width: 556px;
+}
+.seach_bar
+{
+	padding:2em;
+}
+.seach_bar p{
+	font-size: 1.5em;
+	color:#fff;
+	font-weight: 300;
+	margin: 2.6em 0em 0.9em 0em;
+}
+.seach_bar span a{
+	font-size: 1em;
+	color:#fff;
+	text-decoration:underline;
+	font-weight: 300;
+	font-family: 'open_sansregular';
+}
+/**********search_box*************/
+.search_box{
+	background: #F1F3F6;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	padding: 6px 10px;
+	position: relative;
+	cursor: pointer;
+
+	margin: 0 auto;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	box-shadow: inset 0 0 5px rgba(156, 156, 156, 0.75);
+	-moz-box-shadow: inset 0 0 5px rgba(156, 156, 156, 0.75);
+	-webkit-box-shadow: inset 0px 0px 5px rgba(156, 156, 156, 0.75);
+}
+.search_box img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.search_box form input[type="text"] {
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1em;
+	color:#999;
+	width:100%;
+	 font-family: 'open_sansregular';
+	-webkit-apperance: none;
+}
+.search_box form input[type="submit"] {
+	border: none;
+	cursor: pointer;
+	background: url(../images/search.png) no-repeat 0px 1px;
+	position: absolute;
+	right: 0;
+	width: 34px;
+	height: 25px;
+	outline: none;
+	-webkit-appearance:none;
+}
+
+
+/*****copy-right*****/
+.copy_right  {
+	color: #fff;
+	font-size: 0.85em;
+	line-height: 1.8em;
+	padding: 5em 0px 0px 0px;
+	font-family: 'open_sansregular';
+	text-align: center;
+}
+.copy_right a {
+	color:#FF7ED5;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.copy_right a:hover {
+	color:#fff;
+}
+/*********Media Queries************/
+@media only screen and (max-width: 768px)
+{
+.wrap {
+	width: 80%;
+}	
+.maintenance img {
+	width: 315px;
+}
+}
+@media only screen and (max-width: 640px)
+{
+.wrap {
+	width: 85%;
+}	
+.maintenance {
+	padding: 1% 1% 12% 1%;
+}
+.buttom {
+	width: 450px;
+}
+.maintenance img {
+	width: 300px;
+}
+}
+@media only screen and (max-width: 480px)
+{
+.wrap {
+	width: 90%;
+}	
+.maintenance {
+	padding: 1% 1% 12% 1%;
+}
+.buttom {
+	width: 440px;
+}
+/***/
+.maintenance span {
+	font-size: 1.6em;
+}
+.seach_bar p {
+	font-size: 1.2em;
+	margin: 2.6em 0em 0.7em 0em;
+}
+.search_box {
+	padding: 3px 10px;
+}
+.maintenance img {
+	width: 270px;
+}
+}
+@media only screen and (max-width: 320px)
+{
+.wrap {
+	width: 90%;
+}	
+.maintenance {
+	padding: 1% 1% 12% 1%;
+}
+.buttom {
+	width: 290px;
+}
+/***/
+.maintenance span {
+	font-size: 1.4em;
+}
+.seach_bar p {
+	font-size: 1em;
+	margin: 1.5em 0em 2em 0em;
+}
+.maintenance span img {
+vertical-align: middle;
+}
+.maintenance img {
+	width: 200px;
+}
+.copy_right {
+	padding: 2em 0px 0px 0px;
+}
+}
